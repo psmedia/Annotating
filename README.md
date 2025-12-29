@@ -4,4 +4,4 @@ With the permission of William Nienhauser I'm using his annotations of *The Gran
 
 Examples uploaded:
 
-- [Claude Code out of the box](/pien_chueh.html)
+- [Claude Code out of the box](/pien_chueh.html) see [online](https://psmedia.github.io/Annotating/pien_chueh.html)
