@@ -1,0 +1,831 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Pien Ch'üeh and Ts'ang-kung, Memoir 45</title>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
+<style>
+                    body {
+                        font-family: Georgia, serif;
+                        line-height: 1.8;
+                    }
+                    
+                    .tei-container {
+                        max-width: 1400px;
+                        margin: 2rem auto;
+                    }
+                    
+                    .tei-columns {
+                        display: flex;
+                        gap: 2rem;
+                        align-items: flex-start;
+                    }
+                    
+                    .main-text {
+                        flex: 2;
+                        padding-right: 1rem;
+                    }
+                    
+                    .notes-column {
+                        flex: 1;
+                        position: sticky;
+                        top: 2rem;
+                        max-height: calc(100vh - 4rem);
+                        overflow-y: auto;
+                    }
+                    
+                    .note-item {
+                        margin-bottom: 1rem;
+                        padding: 1rem;
+                        background: #f5f5f5;
+                        border-radius: 4px;
+                    }
+                    
+                    .note-toggle {
+                        cursor: pointer;
+                        font-weight: bold;
+                        color: #3273dc;
+                        user-select: none;
+                    }
+                    
+                    .note-toggle:hover {
+                        text-decoration: underline;
+                    }
+                    
+                    .note-content {
+                        margin-top: 0.5rem;
+                        display: none;
+                    }
+                    
+                    .note-content.is-active {
+                        display: block;
+                    }
+                    
+                    .milestone {
+                        color: red;
+                        font-weight: bold;
+                        margin: 0 0.5rem;
+                    }
+                    
+                    .tei-title {
+                        border-bottom: 2px dotted #e0e0e0;
+                        color: #666;
+                    }
+                    
+                    .ref-link {
+                        color: #3273dc;
+                        text-decoration: none;
+                        font-size: 0.85em;
+                        vertical-align: super;
+                    }
+                    
+                    .ref-link:hover {
+                        text-decoration: underline;
+                    }
+                    
+                    /* Popover styles */
+                    [popover] {
+                        border: 1px solid #ddd;
+                        border-radius: 4px;
+                        padding: 1rem;
+                        background: white;
+                        box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+                        max-width: 300px;
+                    }
+                    
+                    [popover]::backdrop {
+                        background: rgba(0,0,0,0.1);
+                    }
+                    
+                    .popover-trigger {
+                        cursor: help;
+                        border-bottom: 1px dotted #3273dc;
+                        color: #3273dc;
+                    }
+                    
+                    .popover-trigger:hover {
+                        background-color: #f0f8ff;
+                    }
+                    
+                    .popover-content h4 {
+                        margin-top: 0;
+                        margin-bottom: 0.5rem;
+                        font-size: 1.1rem;
+                        font-weight: bold;
+                    }
+                    
+                    .popover-names {
+                        margin-bottom: 0.5rem;
+                    }
+                    
+                    .popover-names .lang-label {
+                        font-size: 0.8em;
+                        color: #666;
+                        margin-right: 0.3rem;
+                    }
+                    
+                    .header-section {
+                        background: #f5f5f5;
+                        padding: 2rem;
+                        margin-bottom: 2rem;
+                        border-radius: 8px;
+                    }
+                    
+                    .header-title {
+                        font-size: 2rem;
+                        margin-bottom: 0.5rem;
+                    }
+                    
+                    .header-subtitle {
+                        font-size: 1.5rem;
+                        color: #666;
+                        margin-bottom: 1rem;
+                    }
+                    
+                    .header-meta {
+                        font-size: 0.95rem;
+                        color: #666;
+                    }
+                    
+                    @media screen and (max-width: 1024px) {
+                        .tei-columns {
+                            flex-direction: column;
+                        }
+                        
+                        .notes-column {
+                            position: static;
+                            max-height: none;
+                        }
+                    }
+                </style>
+</head>
+<body>
+<div class="tei-container">
+<div class="header-section">
+<h1 class="header-title">Pien Ch'üeh and Ts'ang-kung, Memoir 45</h1>
+<h2 class="header-subtitle">扁鵲倉公列傳</h2>
+<div class="header-meta">
+<p><strong>Author:</strong>Sima Qian 司馬遷</p>
+<p><strong>Editor:</strong>William H. Nienhauser, Jr.</p>
+</div>
+</div>
+<div class="tei-columns">
+<div class="main-text content">
+      <div class="tei-div">
+        <h2 class="title is-4">
+          <span class="tei-title">Pien Ch'üeh and Ts'ang-kung, Memoir 45</span>
+        </h2>
+        
+        <div class="tei-div">
+          <h2 class="title is-4">
+            P'ien Ch'üeh 扁鵲
+          </h2>
+          
+          <p>
+            <span class="milestone">
+            [p. 105.2785]
+        </span>
+    
+            <span class="popover-trigger" popovertarget="person-pien_chueh">
+              Pien Ch'üeh 
+              扁鵲
+            </span>
+            
+            <a href="#n1" class="ref-link">[1]</a><a href="#n2" class="ref-link">[2]</a>
+            was a native of 
+            <span class="popover-trigger" popovertarget="place-cheng">
+              Cheng 
+              鄭
+            </span> in 
+            <span class="popover-trigger" popovertarget="place-bohai">
+              Po-hai 
+              勃海 Commandery
+            </span>.
+            
+            
+            
+            His 
+            cognomen was 
+            
+              Ch'in 
+              秦
+            
+            
+            and his 
+            praenomen was 
+            
+              Yüeh-jen 
+              越人
+            
+            (The Native of 
+            <span class="popover-trigger" popovertarget="place-yue">Yüeh</span>?).
+            
+            In his youth he became the head of a hostel.
+            
+            When the hostel guest, 
+            <span class="popover-trigger" popovertarget="person-changsang">
+              Mister
+              Ch'ang-sang 
+              長桑
+            </span>
+            (Long-lived Mulberry?),
+            
+            stopped by, 
+            <span class="popover-trigger" popovertarget="person-pien_chueh">Pien Ch'üeh</span> alone found him remarkable and often treated 
+            him with respect. <span class="popover-trigger" popovertarget="person-changsang">Mister Ch'ang-sang</span> also recognized that 
+            <span class="popover-trigger" popovertarget="person-pien_chueh">Pien Ch'üeh</span> was not an ordinary man. Only after coming and 
+            going for more than 
+            ten years did he [<span class="popover-trigger" popovertarget="person-changsang">Mister Ch'ang-sang</span>] 
+            summon <span class="popover-trigger" popovertarget="person-pien_chueh">Pien Ch'üeh</span> to sit with him in private and secretly
+            
+            said to him: 
+            "I have a secret [medical] formula. I am growing old and would like to hand it on to you, Sir. 
+            You must not disclose it." 
+            <span class="popover-trigger" popovertarget="person-pien_chueh">Pien Ch'üeh</span> said, 
+            "I respectfully promise." 
+            Then he took out some medicinal herbs from the inside of his jacket and gave them to 
+            <span class="popover-trigger" popovertarget="person-pien_chueh">Pien Ch'üeh</span>. 
+            "Drink these [herbs] with water from the surface of a pond
+            
+            and after 
+            thirty days you will be able to discern things [regarding illnesses]!"
+            
+            
+            Then he took all the documents of his secret formulae and gave them entirely to 
+            <span class="popover-trigger" popovertarget="person-pien_chueh">Pien Ch'üeh</span>. Suddenly he disappeared—probably he was not 
+            a human being.
+          </p>
+          
+          <p>
+            After <span class="popover-trigger" popovertarget="person-pien_chueh">Pien Ch'üeh</span>, as he had said, had drunk the herbs 
+            for thirty days, he could see a person on the other side of a low wall. 
+            Using this when examining patients, he could completely see the concretions and knots in the 
+            five viscera 五臟.
+            
+            When he practiced medicine [however] he did so solely under the name of 
+            diagnosing pulses.
+            
+            Solely by means of taking pulses he became famous. As a physician he was sometimes in 
+            <span class="popover-trigger" popovertarget="place-qi">Ch'i</span> and sometimes in 
+            <span class="popover-trigger" popovertarget="place-zhao">Chao</span>. In 
+            <span class="popover-trigger" popovertarget="place-zhao">Chao</span> he was called 
+            <span class="popover-trigger" popovertarget="person-pien_chueh">Pien Ch'üeh</span>.
+            
+          </p>
+          
+          <p>
+            <span class="milestone">
+            [p. 2786]
+        </span>
+            During the time of 
+            <span class="popover-trigger" popovertarget="person-duke_zhao">
+              Duke
+              Chao 
+              昭
+            </span> of 
+            <span class="popover-trigger" popovertarget="place-jin">Chin</span> 
+            (r. 531-526),
+            
+            when the various 
+            grand masters [of the clans in 
+            <span class="popover-trigger" popovertarget="place-jin">Chin</span>] were becoming powerful and the ducal clan was weakening,
+            
+            <span class="popover-trigger" popovertarget="person-viscount_chien">
+              Viscount
+              Chien 
+              簡
+            </span> of 
+            <span class="popover-trigger" popovertarget="place-zhao">Chao</span>
+            
+            became a 
+            Grand Master and took sole control of the affairs of the state. 
+            <span class="popover-trigger" popovertarget="person-viscount_chien">Viscount Chien</span> became ill
+            
+            and for 
+            five days he could not recognize anyone.
+            
+            The 
+            grand masters
+            
+            were all afraid. At this point, they summoned 
+            <span class="popover-trigger" popovertarget="person-pien_chueh">Pien Ch'üeh</span>. 
+            <span class="popover-trigger" popovertarget="person-pien_chueh">Pien Ch'üeh</span> entered, examined the illness, and came out. 
+            <span class="popover-trigger" popovertarget="person-dong_anyu">
+              Tung An-yü 
+              董安于
+            </span>
+            
+            questioned <span class="popover-trigger" popovertarget="person-pien_chueh">Pien Ch'üeh</span>. 
+            <span class="popover-trigger" popovertarget="person-pien_chueh">Pien Ch'üeh</span> said, 
+            "The blood vessels are [well] regulated,
+            
+            so what do you feel is strange [about this]? Long ago 
+            <span class="popover-trigger" popovertarget="person-duke_mu">
+              Duke
+              Mu 
+              穆
+            </span> of 
+            <span class="popover-trigger" popovertarget="place-qin">Ch'in</span> 
+            (r. 659-621 B.C.) was once like this for 
+            seven days and then he awoke."
+            
+            On the day he awoke, he informed the 
+            <span class="popover-trigger" popovertarget="person-chih">
+              Noble Scion
+              Chih 
+              支
+            </span> and 
+            <span class="popover-trigger" popovertarget="person-tzu_yu">
+              Tzu-yü 
+              子輿
+            </span>,
+            
+            saying: 'I went to the residence of 
+            Ti 帝 (the High God); I was so pleased.
+            
+            The reason I stayed for a
+          </p>
+        </div>
+      </div>
+    </div>
+<div class="notes-column">
+<h3 class="title is-5">Notes</h3>
+<div class="note-item" id="n2">
+<div class="note-toggle">
+                Note 2 ▼
+            </div>
+<div class="note-content">
+              <p>Pien Ch'üeh 扁鵲 is not a personal name, but what this 
+              physician was called in <span class="popover-trigger" popovertarget="place-zhao">Chao</span> (see text below and 
+              <span class="popover-trigger" popovertarget="person-wang_liqi">Wang Li-ch'i</span>, 105.2213n., and <span class="popover-trigger" popovertarget="person-cao_dongyi">
+              Ts'ao Tung-yi 曹東義</span> <span class="tei-title">"Pien Ch'üeh [Ch'in Yüeh-jen] li-chi k'ao" 
+              扁鵲（秦越人）里籍考</span>, <span class="tei-title">Chung-hua yi-shih tsa-chih 中華醫史雜誌</span>, 
+              23.1 [1993]: 15-19). <span class="popover-trigger" popovertarget="person-morita_den">Morita Den 森田傳</span>, 
+              <span class="tei-title">Shiki Hen Shaku Sō-kō retsuden yakuchū 史記扁鵲倉公列傳譯注</span> (Tokyo, 1986, p. 24) 
+              speculates that ts'iak 砦 (in Chou Fa-kao's 
+              reconstruction) was a play on pien shih 砭石, 
+              the stone needle or prick (a primitive kind of scalpel) used to treat diseases (see text below) 
+              and furthermore that the magpie (ch'üeh 鵲) had a call that 
+              is very similar to ts'iak or diak.</p>
+              
+              <p>He was also known as the Lü Physician (Lü Yi 盧醫), 
+              since his home was in <span class="popover-trigger" popovertarget="place-lu">Lü 盧</span>, a statelet absorbed by 
+              <span class="popover-trigger" popovertarget="place-qi">Ch'i</span>.</p>
+              
+              <p>There are two works (no longer extant) attributed to Pien Ch'üeh: 
+              <span class="tei-title">Pien Ch'üeh nei-ching 扁鵲內經</span> 
+              (Inner Classic of Pien Ch'üeh) in 9 chüan and a <span class="tei-title">
+              Wai-ching 外經</span> (Outer Classic) in 12 chüan (<span class="tei-title">Han shu 漢書</span>, 30.1776).</p>
+            </div>
+</div>
+<div class="note-item" id="n3">
+<div class="note-toggle">
+                Note 3 ▼
+            </div>
+<div class="note-content">
+              <p>Hsü 徐 (<span class="tei-title">Chi-chieh 集解</span>) first noted that 
+              Cheng 鄭 should be read <span class="popover-trigger" popovertarget="place-mo_county">Mo 鄚</span> 
+              and is a county. <span class="popover-trigger" popovertarget="person-wang_liqi">Wang Li-ch'i</span> (105.2213.) concurs and 
+              locates Mo County near modern Mo-chou Chen 鄚州鎮 
+              in Jen-ch'iu 任丘 County in Hopei. 
+              Wang further observes that Po-hai was first made a commandery by 
+              <span class="popover-trigger" popovertarget="person-liu_pang">Liu Pang</span> under the Han 
+              and there was no such commandery in the pre-Ch'in state of <span class="popover-trigger" popovertarget="place-qi">Ch'i</span>.</p>
+            </div>
+</div>
+<div class="note-item" id="n1">
+<div class="note-toggle">
+                Note 1 ▼
+            </div>
+<div class="note-content">
+            <p><span class="popover-trigger" popovertarget="person-wang_shao">Wang Shao 王劭</span> (550-610?) is cited in 
+            <span class="tei-title">So-yin 索隱</span> arguing that this chapter belongs near the end of the book 
+            adjacent to the chapters on the diviners (chapters 127 and 128) and has been placed 
+            between the memoirs by some later editor erroneously. <span class="popover-trigger" popovertarget="person-chang_shoujieh">
+            Chang Shou-chieh 張守節</span> (<span class="tei-title">Cheng-yi 正義</span>) follows this line 
+            of thought in his claim that although this collective memoir (lei chuan 類傳) may show 
+            similarities to chapters 127 and 128, it was placed among the memoirs on early 
+            Han figures because <span class="popover-trigger" popovertarget="person-chunyu_yi">
+            Ch'un-yü Yi 淳于意</span> lived under <span class="popover-trigger" popovertarget="person-emperor_wen">
+            Emperor Wen 文</span> of the Han. <span class="popover-trigger" popovertarget="person-li_jingxing">Li Ching-hsing 李景星
+            </span> (1876-1934) refutes both arguments in favor of the idea that as a joint 
+            biography of someone from antiquity with someone of modern times—similar to chapter 84, 
+            <span class="tei-title">Ch'ü Yüan, Chia Yi lieh-chuan 屈原·賈誼列傳</span>—this chapter is placed 
+            exactly right.</p>
+          </div>
+</div>
+<div class="note-item" id="n4">
+<div class="note-toggle">
+                Note 4 ▼
+            </div>
+<div class="note-content">
+              <p>The shih 氏 here is superfluous and indicates once 
+              again <span class="popover-trigger" popovertarget="person-sima_qian">Ssu-ma Ch'ien's</span> apparent misunderstanding of the 
+              distinction that existed between nomen 氏 (shih) and 
+              cognomen (hsing 姓) in pre-Ch'in times.</p>
+            </div>
+</div>
+<div class="note-item" id="n5">
+<div class="note-toggle">
+                Note 5 ▼
+            </div>
+<div class="note-content">
+              <p>Yüeh-jen 越人 may be a title similar to 
+              Chen-jen 真人 which was often applied to early medical practitioners 
+              (cf. the entry on Li Chen-jen 李真人 curing an eye disease in the 
+              Song dynasty <span class="tei-title">Yi-chia lei 醫家類</span> 3.6a).</p>
+            </div>
+</div>
+<div class="note-item" id="n6">
+<div class="note-toggle">
+                Note 6 ▼
+            </div>
+<div class="note-content">
+              <p>This line might also be read "he became an innkeeper for someone else." The 
+              <span class="tei-title">So-yin</span> edition of the <span class="tei-title">Shih chi</span> reads simply 
+              she-chang 舍長 (without jen 人).</p>
+            </div>
+</div>
+<div class="note-item" id="n7">
+<div class="note-toggle">
+                Note 7 ▼
+            </div>
+<div class="note-content">
+              <p>Master Ch'ang-sang 長桑公 is mentioned several 
+              times in various early texts: in the <span class="tei-title">Chen kao 真誥</span> (chüan 14, fol. 15b) he is 
+              said to be <span class="popover-trigger" popovertarget="person-zhuangzi">Chuang Tzu's</span> master, in the Taoist collectanea 
+              <span class="tei-title">Yin-chi ch'i-ch'ien 雲笈七籤</span> he is depicted as a recluse who went about with 
+              his hair down singing cryptic songs (chüan 110, fol. 1b), and in the <span class="tei-title">Shen-hsien chuan 神仙傳</span> 
+              is said to have been the master of Yü Tzu 于子 (chüan 4, fol. 6a).</p>
+              
+              <p>On why he has the epithet "mulberry," two explanations seem tenable. The first follows the 
+              association of the mulberry with the fecundity of the grove where only women worked (cf. the 
+              luxuriance of the mulberry in <span class="tei-title">"Hsi sang" 隰桑</span> Mao #228 or <span class="tei-title">"Sang jou" 桑柔</span> 
+              Mao #257, of the <span class="tei-title">Shih ching 詩經</span>). More likely is the second explanation that the 
+              mulberry itself is long-lived and thus symbolizes the "father" or "ancestor"—in this case of 
+              medicine—as in <span class="tei-title">"Hsiao pien" 小弁</span> (Mao #197).</p>
+            </div>
+</div>
+<div class="note-item" id="n8">
+<div class="note-toggle">
+                Note 8 ▼
+            </div>
+<div class="note-content">
+              <p>Most commentators read chien 間 as secretly (cf. 
+              <span class="popover-trigger" popovertarget="person-wang_liqi">Wang Li-ch'i</span>, 110.2213n.); the <span class="tei-title">Cheng-yi</span> 
+              reads it as hsien 閑, suggesting a reading of "familiarly" 
+              or "leisurely" which seems also possible.</p>
+            </div>
+</div>
+<div class="note-item" id="n9">
+<div class="note-toggle">
+                Note 9 ▼
+            </div>
+<div class="note-content">
+              <p>The <span class="tei-title">So-yin</span> cites an "old theory" that shang ch'ih shui 上池水, 
+              literally "water on the top of a pond," indicates water than has not yet reached the ground such as 
+              dew that collects on plants. The <span class="tei-title">Cheng-yi</span> suggests it might refer to dew collected 
+              in special containers. But the literal meaning or water from the top of a pool or pond may also 
+              obtain here. Nakai Riken 中井履軒 (1732-1817) explains that such pure water 
+              would be used to take the herbs.</p>
+            </div>
+</div>
+<div class="note-item" id="n10">
+<div class="note-toggle">
+                Note 10 ▼
+            </div>
+<div class="note-content">
+              <p><span class="tei-title">So-yin</span> argues that wu 物 here refers to 
+              ghosts or immortals. Another possibility might be material phenomena.</p>
+            </div>
+</div>
+<div class="note-item" id="n11">
+<div class="note-toggle">
+                Note 11 ▼
+            </div>
+<div class="note-content">
+              <p>I.e., heart, liver, spleen, lungs and kidneys. <span class="popover-trigger" popovertarget="person-cui_shi">Ts'ui Shih 崔適</span> 
+              (1852-1924) points out that the <span class="tei-title">Cheng-yi</span> glosses both 
+              wu tsang 五臟 (five viscera) and liu fu 六府 
+              (six bowels) suggesting that the original text read: "he could completely see the concretions and 
+              knots in the five viscera and the six bowels" (<span class="tei-title">Shih chi t'an-yüan 史記探源</span> [Peking: 
+              Pei-ching Ta-hsüeh Ch'u-pan-she], 1986 [original preface 1909], p. 205). Cf. also the translation 
+              and discussion in Elisabeth Hsu, <span class="tei-title">The Transmission of Chinese Medicine</span> 
+              (Cambridge: Cambridge University Press, 1999), p. 85.</p>
+            </div>
+</div>
+<div class="note-item" id="n12">
+<div class="note-toggle">
+                Note 12 ▼
+            </div>
+<div class="note-content">
+              <p>In other words, although he could see through people, he hid this power and pretended to be 
+              merely a pulse diagnostician. Another reading for this sentence would be "[but] he solely made his 
+              name through diagnosing pulses."</p>
+            </div>
+</div>
+<div class="note-item" id="n13">
+<div class="note-toggle">
+                Note 13 ▼
+            </div>
+<div class="note-content">
+              <p>See n. 2 above.</p>
+            </div>
+</div>
+<div class="note-item" id="n14">
+<div class="note-toggle">
+                Note 14 ▼
+            </div>
+<div class="note-content">
+              <p>Morita (p. 30n.) suspects that this should be Duke Ting 定 
+              from 476-475 B.C. (cf. <span class="tei-title">Shih chi</span>, 39.1685) since his dates 
+              correspond better to those of <span class="popover-trigger" popovertarget="person-viscount_chien">Viscount Chien</span> (see also the following note). 
+              Although we have very little information on Duke Shao in the <span class="tei-title">Shih chi</span> 
+              (cf. 39.1684 and 14.651-4), the comments at the end of the accounts of his rein in the <span class="tei-title">Shih chi</span> 
+              (see the following note) suggest rather than Duke Chao is intended (if possibly 
+              anachronistic) here.</p>
+            </div>
+</div>
+<div class="note-item" id="n15">
+<div class="note-toggle">
+                Note 15 ▼
+            </div>
+<div class="note-content">
+              <p><span class="tei-title">Shih chi</span>, 39.1684 reads: "Duke Chao expired in his sixth year. 
+              The Six Excellencies [the heads of the Han 韓, 
+              Chao 趙, Wei 魏, 
+              Fan 范, Chung-hang 中行 and 
+              Chih 智 clans] were mighty and the ducal house was brought low" 
+              昭公六年卒·六卿彊·公室卑 (cf. the similar passage on <span class="tei-title">Shih chi</span>, 
+              14.654-5 and the very similar comments of Tzu-fu Hui's 子服惠 recorded in the 
+              <span class="tei-title">Tso chuan</span> (Yang, Tso, Chao 16, 526 B.C., p. 1382).</p>
+            </div>
+</div>
+<div class="note-item" id="n16">
+<div class="note-toggle">
+                Note 16 ▼
+            </div>
+<div class="note-content">
+              <p>He was the son of Viscount Ch'eng 成 of 
+              <span class="popover-trigger" popovertarget="place-zhao">Chao</span>; his nomen was 
+              Chao and his praenomen was 
+              Yang 鞅 (after turning against 
+              <span class="popover-trigger" popovertarget="place-jin">Chin</span> openly, he changed his praenomen to 
+              Chih-fu 志父; see Fang Hsüan-ch'en, pp. 571-2, #1965). 
+              For further details see <span class="tei-title">Shih chi</span>, 43.1786 and 15.687-8). Considered the founder 
+              of the state of <span class="popover-trigger" popovertarget="place-zhao">Chao</span>, he ruled the area that became 
+              <span class="popover-trigger" popovertarget="place-zhao">Chao</span> (originally a part of 
+              <span class="popover-trigger" popovertarget="place-jin">Chin</span>) for the sixty-year period from 
+              517-458 B.C. Given the length of his rule, it is unlikely he 
+              could have been more than a young boy during the reign of Duke Chao 
+              of <span class="popover-trigger" popovertarget="place-jin">Chin</span>.</p>
+            </div>
+</div>
+<div class="note-item" id="n17">
+<div class="note-toggle">
+                Note 17 ▼
+            </div>
+<div class="note-content">
+              <p>According to <span class="tei-title">"Chao shih-chia" 趙世家</span> (<span class="tei-title">Shih chi</span>, 43.1787), this 
+              illness occurred in 501 B.C. (<span class="tei-title">Cheng-yi</span> claims that the 
+              chronological tables also record this, but they do not in the extant version included in the 
+              Chung-hua edition).</p>
+            </div>
+</div>
+<div class="note-item" id="n18">
+<div class="note-toggle">
+                Note 18 ▼
+            </div>
+<div class="note-content">
+              <p>A parallel passage on <span class="popover-trigger" popovertarget="person-pien_chueh">Pien Ch'üeh's</span> treatment of 
+              <span class="popover-trigger" popovertarget="person-viscount_chien">Viscount Chien's</span> illness, virtually identical to the text 
+              here with one exception (see text and notes below), appears in the <span class="tei-title">"Chao shih-chia"</span> 
+              (<span class="tei-title">Shih chi</span>, 43.1786-7; see also Chavannes [5:25-31] translation. It is followed in the 
+              <span class="tei-title">"Chao shih-chia"</span> by a complete interpretation of the dream which is not cited here.</p>
+            </div>
+</div>
+<div class="note-item" id="n19">
+<div class="note-toggle">
+                Note 19 ▼
+            </div>
+<div class="note-content">
+              <p>This refers to those grand masters who were serving the Viscount 
+              (see Morita, p. 30n.).</p>
+            </div>
+</div>
+<div class="note-item" id="n20">
+<div class="note-toggle">
+                Note 20 ▼
+            </div>
+<div class="note-content">
+              <p>One of the Viscount's vassals.</p>
+            </div>
+</div>
+<div class="note-item" id="n21">
+<div class="note-toggle">
+                Note 21 ▼
+            </div>
+<div class="note-content">
+              <p>T'ung Pin 童斌 (1510-1595, cited in Takigawa, 105.4) glosses 
+              chih 治 as "chih huan" 治亂 
+              (to bring order to a chaotic situation) and our translation follows this reading. 
+              T'ang Yao 唐堯 (<span class="tei-title">"Pien Ch'üeh, Ts'ang-kung lieh-chuan" 扁鵲倉公列傳</span> 
+              in <span class="tei-title">Yi ku wen hsüan 醫古文選</span> Tuan Yi-shan 段逸山 ed, 
+              [Rpt. Peking: Jen-min Wei-sheng Ch'u-pan-she, 1994 (1986)], p. 41, n. 14) also reads chih as 
+              an ting 安定.</p>
+            </div>
+</div>
+<div class="note-item" id="n22">
+<div class="note-toggle">
+                Note 22 ▼
+            </div>
+<div class="note-content">
+              <p>See the brief account of this dream on <span class="tei-title">Shih chi</span>, 28.1360.</p>
+            </div>
+</div>
+<div class="note-item" id="n23">
+<div class="note-toggle">
+                Note 23 ▼
+            </div>
+<div class="note-content">
+              <p>Both apparently were grand masters of 
+              <span class="popover-trigger" popovertarget="place-qin">Ch'in</span>. Noble Scion Chih 支 
+              (Chih 枝 in the <span class="tei-title">Tso chuan</span>, agnomen 
+              Tzu-sang 子桑) was an advisor to 
+              Duke Mu (cf. Yang, Tso, Hsi 9 and 13, pp. 331 and 349; 
+              Fang Hsüan-ch'en, p. 184, #349). Aoki (p. 147n.) argues that 
+              Tzu-yü refers to the Tzu-ch'e 子車 Clan of 
+              <span class="popover-trigger" popovertarget="place-qin">Ch'in</span> (see also <span class="tei-title">Shih chi</span>, 5.194, 
+              <span class="tei-title">Grand Scribe's Records</span>, 1:102 and the commentary on Yang, Tso, Wen 6, pp. 546-7), 
+              but this still does not make clear who this particular member of the clan was. 
+              Chavannes (5:25) believes Tzu-yü was the father of the 
+              three Tzu-yü clansmen buried with Duke Mu, 
+              but it seems safest to note that Tzu-yü (or 
+              Tzu-ch'e) was a <span class="popover-trigger" popovertarget="place-qin">Ch'in</span> clan and that, as 
+              Takigawa (105.4) notes, the exact person referred to here can not be determined.</p>
+            </div>
+</div>
+<div class="note-item" id="n24">
+<div class="note-toggle">
+                Note 24 ▼
+            </div>
+<div class="note-content">
+              <p>Chavannes (5:25) translates: "et m'y suis fort plu."</p>
+            </div>
+</div>
+</div>
+</div>
+<div id="person-sima_qian" popover="auto" class="popover-content">
+<h4>Sima Qian</h4>
+<div class="popover-names"><div>
+<span class="lang-label">Chinese:</span>司馬遷</div></div>
+<div>
+<strong>Born:</strong>-0145
+                        (c. 145 BCE)
+                    </div>
+<div>
+<strong>Died:</strong>-0086
+                        (c. 86 BCE)
+                    </div>
+<div>
+<strong>Occupation:</strong>Historian</div>
+<div style="margin-top: 0.5rem; font-size: 0.9em; color: #666;">Author of the Shiji (Records of the Grand Historian)</div>
+</div>
+<div id="person-pien_chueh" popover="auto" class="popover-content">
+<h4>Pien Ch'üeh</h4>
+<div class="popover-names"><div>
+<span class="lang-label">Chinese:</span>扁鵲</div></div>
+<div>
+<strong>Active:</strong>5th century BCE</div>
+<div>
+<strong>Occupation:</strong>Physician</div>
+<div style="margin-top: 0.5rem; font-size: 0.9em; color: #666;">Legendary physician, known for pulse diagnosis and supernatural diagnostic abilities</div>
+</div>
+<div id="person-changsang" popover="auto" class="popover-content">
+<h4>Master Ch'ang-sang</h4>
+<div class="popover-names"><div>
+<span class="lang-label">Chinese:</span>長桑公</div></div>
+<div>
+<strong>Occupation:</strong>Physician, teacher</div>
+<div style="margin-top: 0.5rem; font-size: 0.9em; color: #666;">Mysterious figure who taught Pien Ch'üeh medical arts</div>
+</div>
+<div id="person-viscount_chien" popover="auto" class="popover-content">
+<h4>Viscount Chien of Zhao</h4>
+<div class="popover-names"><div>
+<span class="lang-label">Chinese:</span>趙簡子</div></div>
+<div>
+<strong>Born:</strong>-0550 - -0530</div>
+<div>
+<strong>Died:</strong>-0458
+                        (458 BCE)
+                    </div>
+<div>
+<strong>Active:</strong>517-458 BCE</div>
+<div>
+<strong>Occupation:</strong>Ruler, statesman</div>
+<div style="margin-top: 0.5rem; font-size: 0.9em; color: #666;">Founder of the state of Zhao, patient of Pien Ch'üeh</div>
+</div>
+<div id="person-duke_zhao" popover="auto" class="popover-content">
+<h4>Duke Zhao of Jin</h4>
+<div class="popover-names"><div>
+<span class="lang-label">Chinese:</span>晉昭公</div></div>
+<div>
+<strong>Active:</strong>r. 531-526 BCE</div>
+<div>
+<strong>Occupation:</strong>Duke</div>
+</div>
+<div id="person-duke_mu" popover="auto" class="popover-content">
+<h4>Duke Mu of Qin</h4>
+<div class="popover-names"><div>
+<span class="lang-label">Chinese:</span>秦穆公</div></div>
+<div>
+<strong>Active:</strong>r. 659-621 BCE</div>
+<div>
+<strong>Occupation:</strong>Duke</div>
+<div style="margin-top: 0.5rem; font-size: 0.9em; color: #666;">Historical example cited by Pien Ch'üeh of similar illness</div>
+</div>
+<div id="person-dong_anyu" popover="auto" class="popover-content">
+<h4>Tung An-yü</h4>
+<div class="popover-names"><div>
+<span class="lang-label">Chinese:</span>董安于</div></div>
+<div>
+<strong>Occupation:</strong>Vassal of Viscount Chien</div>
+</div>
+<div id="place-cheng" popover="auto" class="popover-content">
+<h4>Cheng</h4>
+<div class="popover-names"><div>
+<span class="lang-label">Chinese:</span>鄭</div></div>
+<div style="margin-top: 0.5rem; font-size: 0.9em; color: #666;">Possibly should be read as Mo 鄚</div>
+</div>
+<div id="place-mo_county" popover="auto" class="popover-content">
+<h4>Mo County</h4>
+<div class="popover-names"><div>
+<span class="lang-label">Chinese:</span>鄚</div></div>
+<div>
+<strong>Region:</strong>Hopei</div>
+</div>
+<div id="place-bohai" popover="auto" class="popover-content">
+<h4>Po-hai Commandery</h4>
+<div class="popover-names"><div>
+<span class="lang-label">Chinese:</span>勃海</div></div>
+</div>
+<div id="place-zhao" popover="auto" class="popover-content">
+<h4>Zhao</h4>
+<div class="popover-names"><div>
+<span class="lang-label">Chinese:</span>趙</div></div>
+<div style="margin-top: 0.5rem; font-size: 0.9em; color: #666;">State during Warring States period</div>
+</div>
+<div id="place-qi" popover="auto" class="popover-content">
+<h4>Qi</h4>
+<div class="popover-names"><div>
+<span class="lang-label">Chinese:</span>齊</div></div>
+<div style="margin-top: 0.5rem; font-size: 0.9em; color: #666;">State during Spring and Autumn and Warring States periods</div>
+</div>
+<div id="place-jin" popover="auto" class="popover-content">
+<h4>Jin</h4>
+<div class="popover-names"><div>
+<span class="lang-label">Chinese:</span>晉</div></div>
+<div style="margin-top: 0.5rem; font-size: 0.9em; color: #666;">State during Spring and Autumn period</div>
+</div>
+<div id="place-qin" popover="auto" class="popover-content">
+<h4>Qin</h4>
+<div class="popover-names"><div>
+<span class="lang-label">Chinese:</span>秦</div></div>
+<div style="margin-top: 0.5rem; font-size: 0.9em; color: #666;">State that eventually unified China</div>
+</div>
+<div id="place-lu" popover="auto" class="popover-content">
+<h4>Lü</h4>
+<div class="popover-names"><div>
+<span class="lang-label">Chinese:</span>盧</div></div>
+<div style="margin-top: 0.5rem; font-size: 0.9em; color: #666;">Statelet absorbed by Qi, birthplace of Pien Ch'üeh</div>
+</div>
+</div>
+<script>
+                    // Toggle notes
+                    document.addEventListener('DOMContentLoaded', function() {
+                        const toggles = document.querySelectorAll('.note-toggle');
+                        toggles.forEach(toggle => {
+                            toggle.addEventListener('click', function() {
+                                const content = this.nextElementSibling;
+                                content.classList.toggle('is-active');
+                            });
+                        });
+                        
+                        // Setup popovers
+                        const triggers = document.querySelectorAll('.popover-trigger');
+                        triggers.forEach(trigger => {
+                            trigger.addEventListener('click', function(e) {
+                                e.preventDefault();
+                                const popoverId = this.getAttribute('popovertarget');
+                                const popover = document.getElementById(popoverId);
+                                if (popover) {
+                                    popover.showPopover();
+                                }
+                            });
+                        });
+                    });
+                </script>
+</body>
+</html>
